@@ -1,3 +1,5 @@
+import throttle from 'lodash.throttle';
+
 export default async function checkPosition() {
   const height = document.body.offsetHeight;
   const screenHeight = window.innerHeight;
