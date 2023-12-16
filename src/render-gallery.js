@@ -1,8 +1,16 @@
-export {createGallery};
+export { createGallery };
 
-
-function createGallery({hits}) {
-    const markup = hits.map(({ largeImageURL, webformatURL, tags, likes, views,comments, downloads } ) => `<div class="photo-card">
+function createGallery({ hits }) {
+  const markup = hits.map(
+    ({
+      largeImageURL,
+      webformatURL,
+      tags,
+      likes,
+      views,
+      comments,
+      downloads,
+    }) => `<div class="photo-card">
     <a class="gallery-item" href="${largeImageURL}"><img class="gallery-image" src="${webformatURL}" alt="${tags}" loading="lazy"/></a>
     <div class="info">
     <p class="info-item">
@@ -17,7 +25,7 @@ function createGallery({hits}) {
     <p class="info-item">
         <b>Downloads: </b></br>${downloads}
     </p>
-    </div></div>`);
-    return markup.join('')
-    }
-    
+    </div></div>`
+  );
+  return markup.join('');
+}
